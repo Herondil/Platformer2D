@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class VelocityMovement : MonoBehaviour
 {
+
+    public Rigidbody2D rb2d;
+
     // Start is called before the first frame update
     void Start()
     {
