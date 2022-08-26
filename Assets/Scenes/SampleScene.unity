@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 334492541}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &404188799
 Rigidbody2D:
   serializedVersion: 4
@@ -425,7 +425,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404188798}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 493d6f52d0b900948a7c13a7b1e517d5, type: 2}
   m_CullingMode: 0
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 673131784}
   m_Layer: 0
   m_Name: Dwarfy
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,7 +679,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 673131786}
-  GravityScaleOnFall: 3
+  _animator: {fileID: 2030613304}
+  GravityScaleOnFall: 2.5
+  direction: {x: 0, y: 0}
+  walkingSpeed: 200
+  isJumping: 0
+  currentJumpCount: 0
+  jumpPower: 600
+  MaxJumpCount: 3
 --- !u!61 &673131785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -722,11 +729,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b25043b1da7eb6143928bbc999a9619a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &673131787
 Transform:
   m_ObjectHideFlags: 0
@@ -735,7 +742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673131783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.32, y: 2.76, z: 0}
+  m_LocalPosition: {x: 0.21, y: 9.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -756,7 +763,7 @@ GameObject:
   - component: {fileID: 700912143}
   m_Layer: 0
   m_Name: dungeon_floor_tile (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -881,7 +888,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 932373709}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b25043b1da7eb6143928bbc999a9619a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -983,7 +990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &949104463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1144,7 +1151,7 @@ GameObject:
   - component: {fileID: 1076607792}
   m_Layer: 0
   m_Name: mobile friction
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1157,7 +1164,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076607787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 493d6f52d0b900948a7c13a7b1e517d5, type: 2}
   m_CullingMode: 0
@@ -1296,7 +1303,7 @@ GameObject:
   - component: {fileID: 1392818006}
   m_Layer: 0
   m_Name: dungeon_floor_tile (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1409,7 +1416,7 @@ GameObject:
   - component: {fileID: 1825828381}
   m_Layer: 0
   m_Name: mobile friction (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1443,7 +1450,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825828380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 493d6f52d0b900948a7c13a7b1e517d5, type: 2}
   m_CullingMode: 0
@@ -1569,11 +1576,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4960499679212913720, guid: 4a23e88eed67b644183a925f6e6e4cab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.06
+      value: -0.038
       objectReference: {fileID: 0}
     - target: {fileID: 4960499679212913720, guid: 4a23e88eed67b644183a925f6e6e4cab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.11
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 4960499679212913720, guid: 4a23e88eed67b644183a925f6e6e4cab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1654,5 +1661,10 @@ PrefabInstance:
 --- !u!4 &2030613303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4960499679212913720, guid: 4a23e88eed67b644183a925f6e6e4cab, type: 3}
+  m_PrefabInstance: {fileID: 2030613302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2030613304 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7440118088520380264, guid: 4a23e88eed67b644183a925f6e6e4cab, type: 3}
   m_PrefabInstance: {fileID: 2030613302}
   m_PrefabAsset: {fileID: 0}
