@@ -12,6 +12,7 @@ public class FootCollisionManager : MonoBehaviour
         {
             Debug.Log("contact avec un tag Floor");
             _vm.currentJumpCount = 0;
+            //mettre à 0 la vitesse en y ?
         }
     }
 }
